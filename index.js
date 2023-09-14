@@ -38,6 +38,10 @@ app.use("/api/tweets", tweetRoutes);
 //   })
 // })
 
+app.get('/a',function(req,res){
+  res.send('hello');
+});
+
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   connect();
