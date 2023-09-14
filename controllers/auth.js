@@ -25,6 +25,14 @@ export const signup = async (req, res, next) => {
   }
 };
 
+export const signup2 = async (req, res, next) => {
+  try {
+    res.send("hello");
+  } catch (err) {
+    next(err);
+  }
+};
+
 export const signin = async (req, res, next) => {
   try {
     const user = await User.findOne({ username: req.body.username });
